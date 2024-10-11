@@ -53,6 +53,7 @@ img {
 
 main {
   margin-top: 40px;
+  gap: 80px;
 }
 
 .content-tag {
@@ -65,4 +66,31 @@ main {
   letter-spacing: 0.04em;
   color: var(--text-color-primary);
   box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25 );
+}
+
+.card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &::before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    background: linear-gradient(180deg, transparent 0%, #020617 100%);
+  }
+  
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 24px;
+    &:has(.text-lg) {
+      padding: 12px;
+    }
+  }
+
+  h2 {
+    margin-top: 8px;
+  }
 }

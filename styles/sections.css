@@ -13,12 +13,16 @@ section header {
       width: 16px;
       gap: 8px;
     }
+
     &:hover span {
       background-image: url(../assets/icons/ArrowRightHover.svg);
     }
   }
 }
+
 #featured {
+  grid-area: featured;
+
   img {
     height: 100%;
     object-fit: cover;
@@ -26,10 +30,13 @@ section header {
   }
 }
 
-#weekly{
+#weekly {
+  grid-area: weekly;
+
   &>div {
     grid-template-columns: repeat(4, 292px);
   }
+
   img {
     height: 160px;
   }
@@ -43,9 +50,44 @@ section header {
       left: 8px;
     }
 
-    p{
+    p {
       margin-top: 8px;
       font-weight: 800;
     }
   }
+}
+
+#ai {
+  div {
+    gap: 32px;
+  }
+  grid-area: ai;
+
+  img {
+    width: 176px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  h3 {
+    margin-block: 8px 4px;
+  }
+}
+
+aside {
+  grid-area: aside;
+}
+
+#more {
+  margin-top: 32px;
+  img{ 
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+  h3 {
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+
 }
